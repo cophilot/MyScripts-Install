@@ -11,7 +11,7 @@ if [ "$(ls -A $HOME/bin)" ]; then
     git pull
 else
     echo "Cloning repository..."
-    git clone https://github.com/phil1436/MyScripts.git
+    git clone https://github.com/cophilot/MyScripts.git
     # rename folder to bin
     mv MyScripts bin
 fi
