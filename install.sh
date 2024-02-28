@@ -21,12 +21,22 @@ echo "Adding to Path..."
 export PATH="$HOME/bin:$PATH"
 echo $PATH
 
-# check if the command is already in the file
-if grep -q "my-scripts update q" ~/.bashrc; then
-    echo "Startup script already exists!"
-else
-    echo "Adding startup script..."
-    echo "my-scripts update q" >> ~/.bashrc
+# add support for zsh
+if [ -f ~/.zshrc ]; then
+    if grep -q "my-scripts update q" ~/.zshrc; then
+        echo "Startup script already exists!"
+    else
+        echo "Adding startup script..."
+        echo "my-scripts update q" >> ~/.zshrc
+    fi
+fi
+if [ -f ~/.bashrc ]; then
+    if grep -q "my-scripts update q" ~/.bashrc; then
+        echo "Startup script already exists!"
+    else
+        echo "Adding startup script..."
+        echo "my-scripts update q" >> ~/.bashrc
+    fi
 fi
 
 # check if my-scripts is a command now
