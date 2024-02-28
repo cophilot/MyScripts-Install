@@ -29,9 +29,9 @@ if [ -f ~/.zshrc ]; then
         echo "Adding startup script..."
         # add line break
         echo "" >> ~/.zshrc
-        echo "my-scripts update q" >> ~/.zshrc
-        echo "" >> ~/.zshrc
         echo "PATH=\"$HOME/bin:\$PATH\"" >> ~/.zshrc
+        echo "" >> ~/.zshrc
+        echo "my-scripts update q" >> ~/.zshrc
     fi
 fi
 if [ -f ~/.bashrc ]; then
@@ -40,9 +40,9 @@ if [ -f ~/.bashrc ]; then
     else
         echo "Adding startup script..."
         echo "" >> ~/.bashrc
-        echo "my-scripts update q" >> ~/.bashrc
-        echo "" >> ~/.bashrc
         echo "PATH=\"$HOME/bin:\$PATH\"" >> ~/.bashrc
+        echo "" >> ~/.bashrc
+        echo "my-scripts update q" >> ~/.bashrc
     fi
 fi
 
