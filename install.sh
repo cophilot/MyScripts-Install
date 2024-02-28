@@ -27,7 +27,11 @@ if [ -f ~/.zshrc ]; then
         echo "Startup script already exists!"
     else
         echo "Adding startup script..."
+        # add line break
+        echo "" >> ~/.zshrc
         echo "my-scripts update q" >> ~/.zshrc
+        echo "" >> ~/.zshrc
+        echo "PATH=\"$HOME/bin:\$PATH\"" >> ~/.zshrc
     fi
 fi
 if [ -f ~/.bashrc ]; then
@@ -35,7 +39,10 @@ if [ -f ~/.bashrc ]; then
         echo "Startup script already exists!"
     else
         echo "Adding startup script..."
+        echo "" >> ~/.bashrc
         echo "my-scripts update q" >> ~/.bashrc
+        echo "" >> ~/.bashrc
+        echo "PATH=\"$HOME/bin:\$PATH\"" >> ~/.bashrc
     fi
 fi
 
